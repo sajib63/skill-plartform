@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  FaReadme } from "react-icons/fa";
+import { FaReadme } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 
@@ -17,7 +17,7 @@ const Nav = () => {
                     >
 
                         <FaReadme className='text-3xl text-lime-300'></FaReadme>
-                       
+
 
 
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
@@ -58,14 +58,25 @@ const Nav = () => {
 
                     </ul>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
+
                         <li>
                             <Link
                                 to="/"
-                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                 aria-label="Sign up"
                                 title="Sign up"
                             >
-                                Sign up
+                                Register
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/"
+                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                aria-label="Sign up"
+                                title="Sign up"
+                            >
+                                Login
                             </Link>
                         </li>
                     </ul>
@@ -162,11 +173,22 @@ const Nav = () => {
                                             <li>
                                                 <Link
                                                     to="/"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                    className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
                                                 >
-                                                    Sign up
+                                                    Register
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    to="/"
+                                                    className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                                    aria-label="Sign up"
+                                                    title="Sign up"
+                                                >
+                                                    Login
                                                 </Link>
                                             </li>
                                         </ul>
