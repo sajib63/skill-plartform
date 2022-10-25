@@ -27,7 +27,7 @@ const Nav = () => {
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         <li>
                             <Link
-                                to="/"
+                                to="/courses"
                                 aria-label="Our product"
                                 title="Our product"
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -37,7 +37,7 @@ const Nav = () => {
                         </li>
                         <li>
                             <Link
-                                to="/"
+                                to="/faq"
                                 aria-label="Our product"
                                 title="Our product"
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -47,7 +47,7 @@ const Nav = () => {
                         </li>
                         <li>
                             <Link
-                                to="/"
+                                to="/blog"
                                 aria-label="Product pricing"
                                 title="Product pricing"
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -61,7 +61,7 @@ const Nav = () => {
 
                         <li>
                             <Link
-                                to="/"
+                                to="/register"
                                 className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                 aria-label="Sign up"
                                 title="Sign up"
@@ -71,7 +71,7 @@ const Nav = () => {
                         </li>
                         <li>
                             <Link
-                                to="/"
+                                to="/login"
                                 className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                 aria-label="Sign up"
                                 title="Sign up"
@@ -141,7 +141,7 @@ const Nav = () => {
                                         <ul className="space-y-4">
                                             <li>
                                                 <Link
-                                                    to="/"
+                                                    to="/courses"
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -151,7 +151,7 @@ const Nav = () => {
                                             </li>
                                             <li>
                                                 <Link
-                                                    to="/"
+                                                    to="/faq"
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -161,7 +161,7 @@ const Nav = () => {
                                             </li>
                                             <li>
                                                 <Link
-                                                    to="/"
+                                                    to="/blog"
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -172,7 +172,7 @@ const Nav = () => {
 
                                             <li>
                                                 <Link
-                                                    to="/"
+                                                    to="/register"
                                                     className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
@@ -183,7 +183,7 @@ const Nav = () => {
 
                                             <li>
                                                 <Link
-                                                    to="/"
+                                                    to="/login"
                                                     className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
