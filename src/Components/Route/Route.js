@@ -6,6 +6,7 @@ import Details from "../Details/Details";
 import Faq from "../Faq/Faq";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
+import Premium from "../Premium/Premium";
 import Register from "../Register/Register";
 
 export const route=createBrowserRouter([
@@ -40,8 +41,12 @@ export const route=createBrowserRouter([
 
             {
                 path:'/details/:id',
-                
                 element:<Details></Details>,
+                loader:({params})=> fetch(`http://localhost:5000/data/${params.id}`)
+            },
+            {
+                path:'/premium/:id',
+                element:<Premium></Premium>,
                 loader:({params})=> fetch(`http://localhost:5000/data/${params.id}`)
             }
             

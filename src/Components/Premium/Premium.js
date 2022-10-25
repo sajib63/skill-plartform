@@ -2,12 +2,13 @@ import React from 'react';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
-const Details = () => {
+const Premium = () => {
     const allData = useLoaderData();
+    console.log(allData.advance[0]);
     const {
 
         course_thumb,
-        basic_price,
+        advance_price,
         id,
         instructor_img,
         instructor_name,
@@ -16,7 +17,7 @@ const Details = () => {
         subject,
         title,
         watch_time,
-    } = allData;
+    } = allData.advance[0];
     return (
         <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-auto mt-10">
             <figure className="lg:w-6/12 ">
@@ -57,7 +58,7 @@ const Details = () => {
 
                 <div className="flex justify-between">
                     <div>
-                        <p className='text-2xl'><span className='text-lime-600 '>$</span> {basic_price}</p>
+                        <p className='text-2xl'><span className='text-lime-600 '>$</span> {advance_price}</p>
                     </div>
                     <div className="flex gap-2">
                         <p className='text-2xl'>{rating}</p>
@@ -69,13 +70,13 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-between gap-2 mt-5">
-                    <button className="btn bg-lime-600 border-0">Purchase Now !</button>
-                    <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
+                <div className="flex justify-center gap-2 mt-5">
+                    
+                    <Link ><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Details;
+export default Premium;
