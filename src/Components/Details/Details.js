@@ -4,6 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Details = () => {
     const allData = useLoaderData();
+  
     const {
 
         course_thumb,
@@ -71,6 +72,7 @@ const Details = () => {
 
                 <div className="flex justify-between gap-2 mt-5">
                     <button className="btn bg-lime-600 border-0">Purchase Now !</button>
+
                     <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
                 </div>
             </div>

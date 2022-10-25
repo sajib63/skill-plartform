@@ -3,13 +3,24 @@ import { Link } from 'react-router-dom';
 import image from './image/38435-register.gif.crdownload'
 
 const Login = () => {
+
+    const handleLoginUser=event=>{
+        event.preventDefault();
+        const form=event.target;
+      
+        const email=form.email.value;
+        
+        const Password=form.Password.value;
+        console.log( email,  Password);
+
+    }
     return (
         <div className="hero min-h-screen bg-white">
         <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="text-center lg:text-left">
                 <img src={image} alt="" />
             </div>
-            <form className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form onSubmit={handleLoginUser} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
 
                     <div className="form-control">

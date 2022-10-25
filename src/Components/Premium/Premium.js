@@ -1,15 +1,16 @@
 import React from 'react';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
+
 import { Link, useLoaderData } from 'react-router-dom';
 
 const Premium = () => {
     const allData = useLoaderData();
-    console.log(allData.advance[0]);
+ 
     const {
 
         course_thumb,
         advance_price,
-        id,
+        
         instructor_img,
         instructor_name,
         lectures,
