@@ -16,7 +16,7 @@ const Courses = () => {
         <div className='container mx-auto grid lg:grid-cols-3'>
             <div>
                 {
-                    AllData?.map(data => <Link key={data.id}> <p className='lg:mb-10 sm:items-center text-lime-600  mt-5 text-2xl'>{data.title}</p></Link>)
+                    AllData?.map(data => <Link Link to={`/details/${data.id}`} key={data.id}> <p className='lg:mb-10 hover:text-black sm:items-center text-lime-700  mt-5 text-2xl'>{data.title}</p></Link>)
                 }
             </div>
 

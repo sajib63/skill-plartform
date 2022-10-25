@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CoursesCard = ({ data }) => {
-    const { course_thumb, basic_price, advance_price, instructor_img, instructor_name, lectures, rating, subject, title, watch_time } = data;
+    const {id, course_thumb, basic_price, advance_price, instructor_img, instructor_name, lectures, rating, subject, title, watch_time } = data;
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl mt-5">
@@ -20,7 +21,8 @@ const CoursesCard = ({ data }) => {
                 </div>
                 <p className='text-2xl'>{title}</p>
                 <div className="card-actions justify-center">
-                    <button className="btn bg-lime-700 border-0 ">Details</button>
+                   <Link to={`/details/${id}`}>
+                   <button className="btn bg-lime-700 border-0 ">Details</button></Link>
                 </div>
             </div>
         </div>
