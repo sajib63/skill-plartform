@@ -21,11 +21,12 @@ const Details = () => {
         watch_time,
     } = allData;
     return (
-        <div ref={ref} className="card mx-4 lg:card-side bg-base-100 lg:w-6/12 shadow-xl lg:mx-auto mt-10">
-            <figure className="lg:w-6/12 ">
+        
+        <div ref={ref}  className="card mx-4 lg:card-side bg-base-100 lg:w-6/12 shadow-xl lg:mx-auto mt-10">
+            <figure  className="lg:w-6/12 ">
                 <img className="h-full" src={course_thumb} alt="Album" />
             </figure>
-            <div className="card-body">
+            <div  className="card-body">
                 <div className="flex justify-between text-center items-center">
                     <div className="flex text-center  items-center  justify-center">
                         <img

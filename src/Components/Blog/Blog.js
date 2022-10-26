@@ -6,11 +6,12 @@ const Blog = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-10 lg:px-4 lg:py-20">
         <div className="grid max-w-screen-lg gap-8 row-gap-10 mx-auto">
-          <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
+
+          <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row ">
             <div className="mr-4">
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
                 <svg
-                  className="w-10 h-10 text-orange-400"
+                  className="w-10 h-10 bg-lime-600 rounded-full text-black"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -25,17 +26,20 @@ const Blog = () => {
               </div>
             </div>
             <div>
-              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5">What is CORS?</h6>
+              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5 text-lime-600">What is CORS?</h6>
               <p className="mb-3 text-md lg:text-lg text-gray-900">
               Cross-origin resource sharing (CORS) allows AJAX requests to skip the Same-origin policy and access resources from remote hosts.
               </p>
             </div>
           </div>
+
+
+
           <div className="flex flex-col max-w-md sm:mx-auto sm:flex-row">
             <div className="mr-4">
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
                 <svg
-                  className="w-10 h-10 text-orange-400"
+                  className="w-10 h-10 bg-lime-600 rounded-full text-black"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -50,7 +54,7 @@ const Blog = () => {
               </div>
             </div>
             <div>
-              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5">
+              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5 text-lime-600">
               Why are you using firebase? What other options do you have to implement authentication?
               </h6>
               <p className="mb-3 text-md lg:text-lg text-gray-900">
@@ -67,7 +71,7 @@ const Blog = () => {
             <div className="mr-4">
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
                 <svg
-                  className="w-10 h-10 text-orange-400"
+                  className="w-10 h-10 bg-lime-600 rounded-full text-black"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -82,7 +86,7 @@ const Blog = () => {
               </div>
             </div>
             <div>
-              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5">
+              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5 text-lime-600">
               How does the private route work?
               </h6>
               <p className="mb-3 text-md lg:text-lg text-gray-900">
@@ -94,7 +98,7 @@ const Blog = () => {
             <div className="mr-4">
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50">
                 <svg
-                  className="w-10 h-10 text-orange-400"
+                  className="w-10 h-10 bg-lime-600 rounded-full text-black"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -109,7 +113,7 @@ const Blog = () => {
               </div>
             </div>
             <div>
-              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5">
+              <h6 className="mb-3 text-xl lg:text-2xl font-bold leading-5 text-lime-600">
                What is Node? How does Node work?
               </h6>
               <p className="mb-3 text-md lg:text-lg text-gray-900">
