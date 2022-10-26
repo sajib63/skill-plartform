@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 import image from './image/38435-register.gif.crdownload'
@@ -16,9 +17,16 @@ const {loginUser}=useContext(AuthContext);
         const password=form.password.value;
         loginUser(email, password)
         .then(result=>{
-            alert('success')
+            toast.success('successfully Login')
+            form.reset();
+
         })
-        .catch(error=>console.error(error))
+        .catch(error=>{
+            const message=error.message;
+            toast.error(message)
+            form.reset();
+        }
+            )
 
     }
     return (

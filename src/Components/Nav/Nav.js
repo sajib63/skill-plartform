@@ -104,7 +104,12 @@ const Nav = () => {
                             </Link>
                         </li>
 
-                             <li>
+                          <>
+                          {
+                            user?.photoURL? 
+                            <img className='h-16 w-16 rounded-full' src={user?.photoURL} alt="" />
+                            :
+                            <li>
                             <Link
 
                                 aria-label="Our product"
@@ -115,6 +120,9 @@ const Nav = () => {
                                 <FaUserAlt></FaUserAlt>
                             </Link>
                         </li>
+                          }
+                          
+                          </>
 
 
                                <li>

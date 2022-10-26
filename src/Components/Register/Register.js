@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 import image from './image/93385-login (1).gif'
 import { FaGithub, FaGoogle, FaReadme} from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Register = () => {
-const {createUser,googleSignIn,gitSignIn}=useContext(AuthContext);
+const {createUser,googleSignIn,gitSignIn, updateCurrentUser,loading}=useContext(AuthContext);
     const handleCreateUser=event=>{
         event.preventDefault();
         const form=event.target;
@@ -14,24 +15,31 @@ const {createUser,googleSignIn,gitSignIn}=useContext(AuthContext);
         const email=form.email.value;
         const photoURL=form.photoURL.value;
         const password=form.Password.value;
+  
 
         // create user 
         createUser(email, password)
         .then(result=>{
-            alert('success')
+            toast.success('success')
+            updateProfile(name, photoURL)
             form.reset();
         })
-        .catch(error=> console.error(error))  
+        .catch(error=> {
+           
+            toast.error(error.message)
+            form.reset();
+        })  
 
     }
 // google submit 
 const googleSubmit=()=>{
     googleSignIn()
     .then(()=>{
-        alert('success')
+     
     })
     .catch(error=>{
-        console.error(error);
+        const message=error.message;
+            toast.error(message)
     })
 }
 
@@ -40,17 +48,31 @@ const googleSubmit=()=>{
 const gitsubmit=()=>{
     gitSignIn()
     .then(result =>{
-        alert('success')
+       
     })
     .catch(error=>{
-        console.error(error);
+         const message=error.message;
+            toast.error(message)
     })
 }
 
 
 
 
+// update user 
+const updateProfile=(name, photoURL)=>{
+    const profile={
+        displayName:name,
+        photoURL:photoURL
+    }
 
+    updateCurrentUser(profile)
+    .then(()=>{
+
+    })
+    .catch(error=> console.log(error))
+
+}
 
 
 
