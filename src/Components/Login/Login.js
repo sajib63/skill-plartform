@@ -1,17 +1,24 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../UserContext/UserContext';
 import image from './image/38435-register.gif.crdownload'
 
-const Login = () => {
 
+const Login = () => {
+const {loginUser}=useContext(AuthContext);
     const handleLoginUser=event=>{
         event.preventDefault();
         const form=event.target;
       
         const email=form.email.value;
         
-        const Password=form.Password.value;
-        console.log( email,  Password);
+        const password=form.password.value;
+        loginUser(email, password)
+        .then(result=>{
+            alert('success')
+        })
+        .catch(error=>console.error(error))
 
     }
     return (
@@ -35,7 +42,7 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="Password" name='Password' placeholder="password" className="input input-bordered" />
+                        <input type="Password" name='password' placeholder="password" className="input input-bordered" />
                         <label className="label">
                             <p>If You Don't Have Any Account ? Please  <Link to='/register' className='text-lime-500'>Register</Link></p>
                         </label>

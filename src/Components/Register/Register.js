@@ -3,9 +3,10 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 import image from './image/93385-login (1).gif'
+import { FaGithub, FaGoogle, FaReadme} from 'react-icons/fa';
 
 const Register = () => {
-const {createUser}=useContext(AuthContext);
+const {createUser,googleSignIn,gitSignIn}=useContext(AuthContext);
     const handleCreateUser=event=>{
         event.preventDefault();
         const form=event.target;
@@ -20,11 +21,43 @@ const {createUser}=useContext(AuthContext);
             alert('success')
             form.reset();
         })
-        .catch(error=> console.error(error))
-
-        
+        .catch(error=> console.error(error))  
 
     }
+// google submit 
+const googleSubmit=()=>{
+    googleSignIn()
+    .then(()=>{
+        alert('success')
+    })
+    .catch(error=>{
+        console.error(error);
+    })
+}
+
+
+// git submit 
+const gitsubmit=()=>{
+    gitSignIn()
+    .then(result =>{
+        alert('success')
+    })
+    .catch(error=>{
+        console.error(error);
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="hero min-h-screen bg-white">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -72,6 +105,15 @@ const {createUser}=useContext(AuthContext);
                         <div className="form-control mt-6">
                             
                             <button className="btn bg-lime-400 text-black border-0 hover:bg-lime-400">Register</button>
+                        </div>
+                        <div className='mt-5'>
+                        <button onClick={googleSubmit}>
+                            <FaGoogle  className='mr-4 text-3xl text-lime-600'></FaGoogle>
+                        </button>
+                        <button onClick={gitsubmit}>
+                            <FaGithub className='text-3xl text-lime-600'></FaGithub>
+                        </button>
+                        
                         </div>
                     </div>
                 </form>
