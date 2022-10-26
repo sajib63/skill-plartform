@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
-import CV from '../Assets/CV.pdf'
+import Pdf from "react-to-pdf";
 
 const Details = () => {
     const allData = useLoaderData();
-  
+    const ref = React.createRef();
+
     const {
 
         course_thumb,
@@ -20,7 +21,7 @@ const Details = () => {
         watch_time,
     } = allData;
     return (
-        <div className="card mx-4 lg:card-side bg-base-100 lg:w-6/12 shadow-xl lg:mx-auto mt-10">
+        <div ref={ref} className="card mx-4 lg:card-side bg-base-100 lg:w-6/12 shadow-xl lg:mx-auto mt-10">
             <figure className="lg:w-6/12 ">
                 <img className="h-full" src={course_thumb} alt="Album" />
             </figure>
@@ -72,10 +73,11 @@ const Details = () => {
                 </div>
 
                 <div className="flex justify-between gap-2 mt-5 mr-5">
-                    <button  className="btn bg-lime-600 border-0">
-                        <a href={CV} download>Purchase Now !</a>
-                        
-                        </button>
+
+
+                    <Pdf targetRef={ref} filename="code-example.pdf">
+                        {({ toPdf }) => <button onClick={toPdf} className="btn bg-lime-600 border-0"> Purchase Now </button>}
+                    </Pdf>
 
 
                     <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Buy Premium</button></Link>

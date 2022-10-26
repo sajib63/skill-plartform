@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 const CoursesCard = ({ data }) => {
     const {id, course_thumb, basic_price, advance_price, instructor_img, instructor_name, lectures, rating, subject, title, watch_time } = data;
+
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl mt-5 mx-4">
