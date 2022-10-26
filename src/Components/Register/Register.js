@@ -1,17 +1,28 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../UserContext/UserContext';
 import image from './image/93385-login (1).gif'
 
 const Register = () => {
-
+const {createUser}=useContext(AuthContext);
     const handleCreateUser=event=>{
         event.preventDefault();
         const form=event.target;
         const name=form.name.value;
         const email=form.email.value;
-        const PhotoURL=form.PhotoURL.value;
-        const Password=form.Password.value;
-        console.log(name, email, PhotoURL, Password);
+        const photoURL=form.photoURL.value;
+        const password=form.Password.value;
+
+        // create user 
+        createUser(email, password)
+        .then(result=>{
+            alert('success')
+            form.reset();
+        })
+        .catch(error=> console.error(error))
+
+        
 
     }
     return (
@@ -35,7 +46,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">PhotoURL</span>
                             </label>
-                            <input type="text" name='PhotoURL' placeholder="PhotoURL" className="input input-bordered" />
+                            <input type="text" name='photoURL' placeholder="PhotoURL" className="input input-bordered" />
                         </div>
 
 
