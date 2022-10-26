@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import CV from '../Assets/CV.pdf'
 
 const Details = () => {
     const allData = useLoaderData();
@@ -71,7 +72,11 @@ const Details = () => {
                 </div>
 
                 <div className="flex justify-between gap-2 mt-5 mr-5">
-                    <button className="btn bg-lime-600 border-0">Purchase Now !</button>
+                    <button  className="btn bg-lime-600 border-0">
+                        <a href={CV} download>Purchase Now !</a>
+                        
+                        </button>
+
 
                     <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Buy Premium</button></Link>
                 </div>

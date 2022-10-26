@@ -6,6 +6,7 @@ import CoursesCard from '../CoursesCard/CoursesCard';
 
 const Courses = () => {
     const [AllData, setAllData] = useState();
+    
     useEffect(() => {
         fetch('http://localhost:5000/data')
             .then(res => res.json())
