@@ -25,7 +25,7 @@ const Details = () => {
             </figure>
             <div className="card-body">
                 <div className="flex justify-between text-center items-center">
-                    <div className="flex text-center items-center justify-center">
+                    <div className="flex text-center  items-center  justify-center">
                         <img
                             src={instructor_img}
                             className="w-20 h-20 rounded-full"
@@ -47,7 +47,7 @@ const Details = () => {
                         <p className=''>{watch_time}</p>
                     </div>
 
-                    <div className='justify-center items-center flex gap-3 lg:mr-3'>
+                    <div className='justify-center items-center flex gap-3'>
                         <FaReadme className='text-lime-600 text-2xl'></FaReadme>
                         <p>{lectures}</p>
 
@@ -70,10 +70,10 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-between gap-2 mt-5">
+                <div className="flex justify-between gap-2 mt-5 mr-5">
                     <button className="btn bg-lime-600 border-0">Purchase Now !</button>
 
-                    <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
+                    <Link to={`/premium/${id}`}><button className="btn bg-lime-600 border-0">Buy Premium</button></Link>
                 </div>
             </div>
         </div>
