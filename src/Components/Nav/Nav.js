@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { FaReadme } from "react-icons/fa";
+import { FaReadme, FaUserAlt, FaUserAltSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 
@@ -100,9 +100,23 @@ const Nav = () => {
                                 title="Our product"
                                 className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
                             >
-                                {user?.email}
+                                {user?.displayName || user?.email}
                             </Link>
                         </li>
+
+                             <li>
+                            <Link
+
+                                aria-label="Our product"
+                                title="Our product"
+                                className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
+                            >
+                                
+                                <FaUserAlt></FaUserAlt>
+                            </Link>
+                        </li>
+
+
                                <li>
                             <Link
                                 onClick={logoutCurrentUser}
