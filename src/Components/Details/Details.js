@@ -19,7 +19,7 @@ const Details = () => {
         watch_time,
     } = allData;
     return (
-        <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-auto mt-10">
+        <div className="card mx-4 lg:card-side bg-base-100 lg:w-6/12 shadow-xl lg:mx-auto mt-10">
             <figure className="lg:w-6/12 ">
                 <img className="h-full" src={course_thumb} alt="Album" />
             </figure>
@@ -40,14 +40,14 @@ const Details = () => {
                 </div>
                 <h2 className="card-title mt-5 text-lime-600">{title}</h2>
 
-                <div className="my-4 mt-5 flex justify-between items-center text-lg font-medium">
+                <div className="my-4 mx-4 mt-5 flex justify-between items-center text-lg font-medium">
 
                     <div className='justify-center items-center flex gap-3'>
                         <FaStopwatch className='text-lime-600 text-2xl'></FaStopwatch>
                         <p className=''>{watch_time}</p>
                     </div>
 
-                    <div className='justify-center items-center flex gap-3'>
+                    <div className='justify-center items-center flex gap-3 lg:mr-3'>
                         <FaReadme className='text-lime-600 text-2xl'></FaReadme>
                         <p>{lectures}</p>
 

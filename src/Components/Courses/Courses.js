@@ -15,14 +15,14 @@ const Courses = () => {
     return (
         <div className='container mx-auto grid lg:grid-cols-3'>
             
-            <div>
+            <div className='mx-8 w-full'>
                 {
-                    AllData?.map(data => <Link Link to={`/details/${data.id}`} key={data.id}> <p className='lg:mb-10 hover:text-black sm:items-center text-lime-700  mt-5 text-2xl'>{data.title}</p></Link>)
+                    AllData?.map(data => <Link  Link to={`/details/${data.id}`} key={data.id}> <p className='lg:mb-10  hover:text-black  text-lime-700  mt-5 text-2xl'>{data.title}</p></Link>)
                 }
             </div>
 
 
-            <div className='col-span-2 grid lg:grid-cols-3 gap-10 mb-8 '>
+            <div className='col-span-2 grid lg:grid-cols-3 gap-10 mb-8 mx-4'>
                {
                 AllData?.map(data=> <CoursesCard key={data.id} data={data}></CoursesCard>)
                }
