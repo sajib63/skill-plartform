@@ -1,13 +1,14 @@
 import React from 'react';
 
+
 const Blog = () => {
     return (
         <div>
-            <div>
+            <div className='bg-white shadow-2xl mb-8 m-5'>
                 <p><span>Question</span>  what is cors?</p>
                 <p><span>ANS</span> Cross-origin resource sharing (CORS) allows AJAX requests to skip the Same-origin policy and access resources from remote hosts.</p>
             </div>
-            <div>
+            <div className='bg-white shadow-2xl mb-8'>
                 <p><span>Question</span> Why are you using firebase?</p>
                 <p><span>ANS</span> Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.</p>
 
@@ -31,8 +32,10 @@ const Blog = () => {
             </div>
 
 
-
         </div>
+
+
+
     );
 };
 
