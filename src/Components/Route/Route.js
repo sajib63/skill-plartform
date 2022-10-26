@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import Blog from "../Blog/Blog";
 import Courses from "../Courses/Courses";
 import Details from "../Details/Details";
@@ -48,7 +49,7 @@ export const route=createBrowserRouter([
             },
             {
                 path:'/premium/:id',
-                element:<Premium></Premium>,
+                element:<PrivateRoute><Premium></Premium></PrivateRoute>,
                 loader:({params})=> fetch(`http://localhost:5000/data/${params.id}`)
             }
             

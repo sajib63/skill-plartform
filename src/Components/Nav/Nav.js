@@ -107,7 +107,12 @@ const Nav = () => {
                           <>
                           {
                             user?.photoURL? 
-                            <img className='h-16 w-16 rounded-full' src={user?.photoURL} alt="" />
+                            <img 
+                            className='h-16 w-16 rounded-full'
+                             src={user?.photoURL}
+                              alt="" 
+                              
+                              />
                             :
                             <li>
                             <Link

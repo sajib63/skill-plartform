@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 import image from './image/38435-register.gif.crdownload'
 
 
 const Login = () => {
-const {loginUser}=useContext(AuthContext);
+const {loginUser,googleSignIn,gitSignIn}=useContext(AuthContext);
+const [error, setError]=useState('');
     const handleLoginUser=event=>{
         event.preventDefault();
         const form=event.target;
@@ -29,12 +31,40 @@ const {loginUser}=useContext(AuthContext);
             )
 
     }
+
+
+    // google submit 
+const googleSubmit=()=>{
+    googleSignIn()
+    .then(()=>{
+        toast.success('success')
+     
+    })
+    .catch(error=>{
+        const message=error.message;
+           setError(message);
+    })
+}
+
+
+// git submit 
+const gitsubmit=()=>{
+    gitSignIn()
+    .then(result =>{
+        toast.success('success')
+    })
+    .catch(error=>{
+         const message=error.message;
+            setError(message)
+    })
+}
     return (
         <div className="hero min-h-screen bg-white">
         <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="text-center lg:text-left">
                 <img src={image} alt="" />
             </div>
+            <div className="shadow-2xl rounded">
             <form onSubmit={handleLoginUser} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
 
@@ -60,8 +90,23 @@ const {loginUser}=useContext(AuthContext);
                         
                         <button className="btn bg-lime-400 text-black border-0 hover:bg-lime-400">Log-In</button>
                     </div>
+
                 </div>
             </form>
+
+
+               
+            <div className=' rounded bg-white'>
+                    <button onClick={googleSubmit} className="mt-2">
+                        <FaGoogle className='mr-4 text-3xl text-lime-600'></FaGoogle>
+                    </button>
+                    <button onClick={gitsubmit}>
+                        <FaGithub className='text-3xl text-lime-600'></FaGithub>
+                    </button>
+
+                </div>
+            </div>
+           
         </div>
     </div>
     );
