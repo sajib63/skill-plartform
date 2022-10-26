@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../UserContext/UserContext';
 import image from './image/38435-register.gif.crdownload'
 
 
 const Login = () => {
 const {loginUser,googleSignIn,gitSignIn}=useContext(AuthContext);
+const location = useLocation();
+const navigate = useNavigate();
+const from = location.state?.from?.pathname || "/";
+
 const [error, setError]=useState('');
     const handleLoginUser=event=>{
         event.preventDefault();
@@ -21,6 +25,7 @@ const [error, setError]=useState('');
         .then(result=>{
             toast.success('successfully Login')
             form.reset();
+            navigate(from, { replace: true });
 
         })
         .catch(error=>{
@@ -38,6 +43,7 @@ const googleSubmit=()=>{
     googleSignIn()
     .then(()=>{
         toast.success('success')
+        navigate(from, { replace: true });
      
     })
     .catch(error=>{
@@ -52,6 +58,7 @@ const gitsubmit=()=>{
     gitSignIn()
     .then(result =>{
         toast.success('success')
+        navigate(from, { replace: true });
     })
     .catch(error=>{
          const message=error.message;

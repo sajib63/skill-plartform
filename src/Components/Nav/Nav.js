@@ -96,11 +96,10 @@ const Nav = () => {
                              <li>
                             <Link
 
-                                aria-label="Our product"
-                                title="Our product"
+                                
                                 className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
                             >
-                                {user?.displayName || user?.email}
+                                {user?.email || user?.displayName}
                             </Link>
                         </li>
 
@@ -108,10 +107,11 @@ const Nav = () => {
                           {
                             user?.photoURL? 
                             <img 
+                            title={user?.displayName}
                             className='h-16 w-16 rounded-full'
                              src={user?.photoURL}
                               alt="" 
-                              
+
                               />
                             :
                             <li>
