@@ -7,23 +7,22 @@ import { AuthContext } from '../UserContext/UserContext';
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-       
-        const { user,   logoutUser} = useContext(AuthContext);
-        const logoutCurrentUser=()=>{
-            logoutUser()
-            .then(()=>{
+
+    const { user, logoutUser } = useContext(AuthContext);
+    const logoutCurrentUser = () => {
+        logoutUser()
+            .then(() => {
 
             })
-            .catch(error=>console.log(error))
-        }
+            .catch(error => console.log(error))
+    }
     return (
         <div className="bg-gray-900 relative z-50">
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <Link
                         to="/"
-                        aria-label="Company"
-                        title="Company"
+                        
                         className="inline-flex items-center"
                     >
 
@@ -39,8 +38,7 @@ const Nav = () => {
                         <li>
                             <Link
                                 to="/courses"
-                                aria-label="Our product"
-                                title="Our product"
+                                
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Courses
@@ -49,8 +47,7 @@ const Nav = () => {
                         <li>
                             <Link
                                 to="/faq"
-                                aria-label="Our product"
-                                title="Our product"
+                               
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 FAQ
@@ -59,8 +56,7 @@ const Nav = () => {
                         <li>
                             <Link
                                 to="/blog"
-                                aria-label="Product pricing"
-                                title="Product pricing"
+                               
                                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Blog
@@ -72,7 +68,7 @@ const Nav = () => {
                             <input type="checkbox" />
 
 
-                            <svg  className="swap-on fill-current w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+                            <svg className="swap-on fill-current w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
 
 
                             <svg className="swap-off fill-current w-10 h-10 text-lime-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
@@ -84,93 +80,89 @@ const Nav = () => {
 
 
 
-                       
+
 
                     </ul>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
 
                         {
-                            user?.uid? 
-                            <>
-                          
-                             <li>
-                            <Link
+                            user?.uid ?
+                                <>
 
-                                
-                                className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                {user?.email || user?.displayName}
-                            </Link>
-                        </li>
-
-                          <>
-                          {
-                            user?.photoURL? 
-                            <img 
-                            title={user?.displayName}
-                            className='h-16 w-16 rounded-full'
-                             src={user?.photoURL}
-                              alt="" 
-
-                              />
-                            :
-                            <li>
-                            <Link
-
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
-                            >
-                                
-                                <FaUserAlt></FaUserAlt>
-                            </Link>
-                        </li>
-                          }
-                          
-                          </>
+                                    <li>
+                                        <Link
 
 
-                               <li>
-                            <Link
-                                onClick={logoutCurrentUser}
-                                className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                LogOut
-                            </Link>
-                        </li>
+                                            className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
+                                        >
+                                            {user?.email || user?.displayName}
+                                        </Link>
+                                    </li>
 
-                            </>
-                            :
-                            <>
-                            <li>
-                            <Link
-                                to="/register"
-                                className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                Register
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/login"
-                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
-                                aria-label="Sign up"
-                                title="Sign up"
-                            >
-                                Login
-                            </Link>
-                        </li>
+                                    <>
+                                        {
+                                            user?.photoURL ?
+                                                <img
+                                                    title={user?.displayName}
+                                                    className='h-16 w-16 rounded-full'
+                                                    src={user?.photoURL}
+                                                    alt=""
 
-                            </>
+                                                />
+                                                :
+                                                <li>
+                                                    <Link
+
+                                                        
+                                                        className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
+                                                    >
+
+                                                        <FaUserAlt></FaUserAlt>
+                                                    </Link>
+                                                </li>
+                                        }
+
+                                    </>
+
+
+                                    <li>
+                                        <Link
+                                            onClick={logoutCurrentUser}
+                                            className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                            
+                                        >
+                                            LogOut
+                                        </Link>
+                                    </li>
+
+                                </>
+                                :
+                                <>
+                                    <li>
+                                        <Link
+                                            to="/register"
+                                            className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                            
+                                        >
+                                            Register
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/login"
+                                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                            
+                                        >
+                                            Login
+                                        </Link>
+                                    </li>
+
+                                </>
                         }
 
-                     
 
-                        
+
+
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -201,8 +193,7 @@ const Nav = () => {
                                         <div>
                                             <Link
                                                 to="/"
-                                                aria-label="Company"
-                                                title="Company"
+                                                
                                                 className="inline-flex items-center"
                                             >
 
@@ -215,8 +206,7 @@ const Nav = () => {
                                         </div>
                                         <div>
                                             <button
-                                                aria-label="Close Menu"
-                                                title="Close Menu"
+                                               
                                                 className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
@@ -234,8 +224,7 @@ const Nav = () => {
                                             <li>
                                                 <Link
                                                     to="/courses"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Courses
@@ -244,8 +233,7 @@ const Nav = () => {
                                             <li>
                                                 <Link
                                                     to="/faq"
-                                                    aria-label="Our product"
-                                                    title="Our product"
+                                                    
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     FAQ
@@ -254,35 +242,100 @@ const Nav = () => {
                                             <li>
                                                 <Link
                                                     to="/blog"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
+                                                    
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Blog
                                                 </Link>
                                             </li>
+                                            <label className="swap swap-rotate">
 
-                                            <li>
-                                                <Link
-                                                    to="/register"
-                                                    className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
-                                                >
-                                                    Register
-                                                </Link>
-                                            </li>
 
-                                            <li>
-                                                <Link
-                                                    to="/login"
-                                                    className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Sign up"
-                                                >
-                                                    Login
-                                                </Link>
-                                            </li>
+                                                <input type="checkbox" />
+
+
+                                                <svg className="swap-on fill-current w-10 h-10 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+
+
+                                                <svg className="swap-off fill-current w-10 h-10 text-lime-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
+
+                                            </label>
+                                            {
+                            user?.uid ?
+                                <>
+
+                                    <li>
+                                        <Link
+
+
+                                            className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
+                                        >
+                                            {user?.email || user?.displayName}
+                                        </Link>
+                                    </li>
+
+                                    <>
+                                        {
+                                            user?.photoURL ?
+                                                <img
+                                                    title={user?.displayName}
+                                                    className='h-16 w-16 rounded-full'
+                                                    src={user?.photoURL}
+                                                    alt=""
+
+                                                />
+                                                :
+                                                <li>
+                                                    <Link
+
+                                                       
+                                                        className="font-medium tracking-wide text-lime-500 transition-colors duration-200 hover:text-teal-accent-400"
+                                                    >
+
+                                                        <FaUserAlt></FaUserAlt>
+                                                    </Link>
+                                                </li>
+                                        }
+
+                                    </>
+
+
+                                    <li>
+                                        <Link
+                                            onClick={logoutCurrentUser}
+                                            className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black bg-lime-300  transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                          
+                                        >
+                                            LogOut
+                                        </Link>
+                                    </li>
+
+                                </>
+                                :
+                                <>
+                                    <li>
+                                        <Link
+                                            to="/register"
+                                            className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black bg-lime-300 transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                            
+                                        >
+                                            Register
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/login"
+                                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black bg-lime-300   transition duration-200 rounded shadow-md bg-deep-purple-accent-400  focus:shadow-outline focus:outline-none"
+                                           
+                                        >
+                                            Login
+                                        </Link>
+                                    </li>
+
+                                </>
+                        }
+
+                                        
                                         </ul>
                                     </nav>
                                 </div>

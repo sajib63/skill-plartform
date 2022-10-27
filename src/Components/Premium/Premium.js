@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
 
 import { Link, useLoaderData } from 'react-router-dom';
@@ -6,7 +7,9 @@ import { Link, useLoaderData } from 'react-router-dom';
 const Premium = () => {
     const allData = useLoaderData();
   
- 
+ const handleSubmit=()=>{
+    toast.success('successfully Purchase')
+ }
     const {
 
         course_thumb,
@@ -22,7 +25,7 @@ const Premium = () => {
     } = allData.advance[0];
     return (
         <div>
-            <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-auto mt-10">
+            <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-2 lg:mx-auto mt-10">
             <figure className="lg:w-6/12 ">
                 <img className="h-full" src={course_thumb} alt="Album" />
             </figure>
@@ -31,7 +34,7 @@ const Premium = () => {
                     <div className="flex text-center items-center justify-center">
                         <img
                             src={instructor_img}
-                            className="w-20 h-20 rounded-full"
+                            className="w-10 h-10 lg:w-20 lg:h-20 rounded-full"
                             alt=""
                         />
                         <p className="ml-3">{instructor_name}</p>
@@ -64,18 +67,18 @@ const Premium = () => {
                         <p className='text-2xl'><span className='text-lime-600 '>$</span> {advance_price}</p>
                     </div>
                     <div className="flex gap-2">
-                        <p className='text-2xl'>{rating}</p>
-                        <p className='text-2xl text-lime-600'><FaStar></FaStar></p>
-                        <p className='text-2xl text-lime-600'><FaStar></FaStar></p>
-                        <p className='text-2xl text-lime-600'><FaStar></FaStar></p>
-                        <p className='text-2xl text-lime-600'><FaStar></FaStar></p>
-                        <p className='text-2xl text-lime-600'><FaStarHalfAlt></FaStarHalfAlt></p>
+                        <p className='lg:text-2xl'>{rating}</p>
+                        <p className='lg:text-2xl text-lime-600'><FaStar></FaStar></p>
+                        <p className='lg:text-2xl text-lime-600'><FaStar></FaStar></p>
+                        <p className='lg:text-2xl text-lime-600'><FaStar></FaStar></p>
+                        <p className='lg:text-2xl text-lime-600'><FaStar></FaStar></p>
+                        <p className='lg:text-2xl text-lime-600'><FaStarHalfAlt></FaStarHalfAlt></p>
                     </div>
                 </div>
 
                 <div className="flex justify-center gap-2 mt-5">
                     
-                    <Link ><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
+                    <Link ><button onClick={handleSubmit} className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
                 </div>
             </div>
         </div>

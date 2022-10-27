@@ -1,10 +1,15 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaReadme, FaStar, FaStarHalfAlt, FaStopwatch } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import Pdf from "react-to-pdf";
 
 const Details = () => {
-    const allData = useLoaderData();
+    const allData=useLoaderData();
+  
+const toastButton=()=>{
+    toast.success('successfully purchase')
+}
     const ref = React.createRef();
     const options = {
         orientation: 'landscape',
@@ -33,6 +38,11 @@ const Details = () => {
             </figure>
 
             <div className="card-body">
+            <div className='mt-3 mb-3 flex justify-center items-center'>
+                    <Pdf targetRef={ref} options={options} filename="code-example.pdf">
+                            {({ toPdf }) => <button onClick={toPdf} className="btn bg-lime-600 border-0"> Download PDF </button>}
+                        </Pdf>
+                    </div>
                 <div className="flex justify-between text-center items-center">
                     <div className="flex text-center  items-center  justify-center">
                         <img
@@ -84,7 +94,7 @@ const Details = () => {
                     <div className="flex justify-between gap-2 mt-5 mr-5">
 
                         
-                             <button  className="btn bg-lime-600 border-0"> Purchase Now </button>
+                             <button onClick={toastButton}  className="btn bg-lime-600 border-0"> Purchase Now </button>
                         
 
 
@@ -92,11 +102,7 @@ const Details = () => {
                     </div>
 
 
-                    <div className='mt-3'>
-                    <Pdf targetRef={ref} options={options} filename="code-example.pdf">
-                            {({ toPdf }) => <button onClick={toPdf} className="btn bg-lime-600 border-0"> Download PDF </button>}
-                        </Pdf>
-                    </div>
+                  
                 </div>
             </div>
         </div>

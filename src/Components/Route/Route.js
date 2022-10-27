@@ -45,12 +45,12 @@ export const route=createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<Details></Details>,
-                loader:({params})=> fetch(`http://localhost:5000/data/${params.id}`)
+                loader:({params})=> fetch(`https://assignment-10-server-five.vercel.app/data/${params.id}`)
             },
             {
                 path:'/premium/:id',
                 element:<PrivateRoute><Premium></Premium></PrivateRoute>,
-                loader:({params})=> fetch(`http://localhost:5000/data/${params.id}`)
+                loader:({params})=> fetch(`https://assignment-10-server-five.vercel.app/data/${params.id}`)
             }
             
         ]
