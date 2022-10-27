@@ -5,12 +5,13 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Premium = () => {
     const allData = useLoaderData();
+  
  
     const {
 
         course_thumb,
         advance_price,
-        
+        details,
         instructor_img,
         instructor_name,
         lectures,
@@ -20,7 +21,8 @@ const Premium = () => {
         watch_time,
     } = allData.advance[0];
     return (
-        <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-auto mt-10">
+        <div>
+            <div className="card lg:card-side bg-base-100 lg:w-6/12 shadow-xl mx-auto mt-10">
             <figure className="lg:w-6/12 ">
                 <img className="h-full" src={course_thumb} alt="Album" />
             </figure>
@@ -36,7 +38,7 @@ const Premium = () => {
                     </div>
 
                     <div>
-                        <p className='text-lime-600'>{subject}</p>
+                        <p className='text-lime-700'>{subject}</p>
                     </div>
                 </div>
                 <h2 className="card-title mt-5 text-lime-600">{title}</h2>
@@ -76,6 +78,14 @@ const Premium = () => {
                     <Link ><button className="btn bg-lime-600 border-0">Premium Purchase</button></Link>
                 </div>
             </div>
+        </div>
+        <div className="card  w-90 bg-base-100 shadow-2xl lg:w-6/12 lg:mx-auto mt-10 mb-10">
+                <div className="card-body">
+                    <h2 className="card-title text-lime-700 font-bold">{subject}</h2>
+                    <p className=' lg:text-2xl'>{details}</p>
+                    
+                </div>
+        </div>
         </div>
     );
 };

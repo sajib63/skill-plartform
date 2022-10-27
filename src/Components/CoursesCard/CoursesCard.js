@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const CoursesCard = ({ data }) => {
-    const {id, course_thumb, basic_price, advance_price, instructor_img, instructor_name, lectures, rating, subject, title, watch_time } = data;
+    const {id, course_thumb, instructor_img, instructor_name, subject, title } = data;
 
 
     return (

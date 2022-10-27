@@ -146,7 +146,7 @@ const Register = () => {
                   
                  
                 </form>
-                <div className=' rounded bg-white'>
+                <div className=' rounded bg-white flex justify-center items-center'>
                     <button onClick={googleSubmit} className="mt-2">
                         <FaGoogle className='mr-4 text-3xl text-lime-600'></FaGoogle>
                     </button>

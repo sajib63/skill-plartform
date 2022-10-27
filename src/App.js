@@ -7,7 +7,7 @@ import { route } from './Components/Route/Route';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
     <RouterProvider router={route}></RouterProvider>
     
     <Toaster />
