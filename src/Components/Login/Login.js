@@ -79,7 +79,7 @@ const gitsubmit=()=>{
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name='email' placeholder="email" className="input input-bordered" />
+                        <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                     </div>
 
 
@@ -87,7 +87,7 @@ const gitsubmit=()=>{
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="Password" name='password' placeholder="password" className="input input-bordered" />
+                        <input type="Password" name='password' placeholder="password" className="input input-bordered" required/>
                         <label className="label">
                             <p>If You Don't Have Any Account ? Please  <Link to='/register' className='text-lime-500'>Register</Link></p>
                         </label>

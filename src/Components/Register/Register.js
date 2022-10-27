@@ -103,7 +103,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Full Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Full-Name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Full-Name" className="input input-bordered" required/>
                         </div>
 
 
@@ -111,7 +111,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">PhotoURL</span>
                             </label>
-                            <input type="text" name='photoURL' placeholder="PhotoURL" className="input input-bordered" />
+                            <input type="text" name='photoURL' placeholder="PhotoURL" className="input input-bordered"  required/>
                         </div>
 
 
@@ -120,7 +120,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
                         </div>
 
 
@@ -128,7 +128,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="Password" name='Password' placeholder="password" className="input input-bordered" />
+                            <input type="Password" name='Password' placeholder="password" className="input input-bordered" required />
                             <label className="label">
                                 <p>If You Have Any Account ? Please  <Link to='/login' className='text-lime-500'>Login</Link></p>
 

@@ -8,7 +8,7 @@ export const AuthContext = createContext();
 const auth = getAuth(app)
 
 const UserContext = ({ children }) => {
-    const [user, setUser] = useState({ email: 'sajib7315@gmail.com' })
+    const [user, setUser] = useState('')
     const googleProvider = new GoogleAuthProvider();
     const gitProvider = new GithubAuthProvider();
     const [loading, setLoading]=useState(false);
