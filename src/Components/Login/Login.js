@@ -13,7 +13,7 @@ const location = useLocation();
 const navigate = useNavigate();
 const from = location.state?.from?.pathname || "/";
 
-const [error, setError]=useState('');
+
     const handleLoginUser=event=>{
         event.preventDefault();
         const form=event.target;
@@ -23,9 +23,19 @@ const [error, setError]=useState('');
         const password=form.password.value;
         loginUser(email, password)
         .then(result=>{
+            
+            const user=result.user;
+            const currentUser={
+                email:user.email
+            }
+            console.log(currentUser);
+
+
+          
+
             toast.success('successfully Login')
             form.reset();
-            navigate(from, { replace: true });
+            // navigate(from, { replace: true });
 
         })
         .catch(error=>{
@@ -42,13 +52,13 @@ const [error, setError]=useState('');
 const googleSubmit=()=>{
     googleSignIn()
     .then(()=>{
-        toast.success('success')
-        navigate(from, { replace: true });
+        // toast.success('success')
+        // navigate(from, { replace: true });
      
     })
     .catch(error=>{
         const message=error.message;
-           setError(message);
+          toast.error(message)
     })
 }
 
@@ -57,12 +67,12 @@ const googleSubmit=()=>{
 const gitsubmit=()=>{
     gitSignIn()
     .then(result =>{
-        toast.success('success')
-        navigate(from, { replace: true });
+        // toast.success('success')
+        // navigate(from, { replace: true });
     })
     .catch(error=>{
          const message=error.message;
-            setError(message)
+            toast.error(message)
     })
 }
     return (
